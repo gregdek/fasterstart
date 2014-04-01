@@ -3,7 +3,7 @@
       "yum-options": "--nogpg",
       "eucalyptus-repo": "http://downloads.eucalyptus.com/software/eucalyptus/nightly/4.0/centos/6/x86_64/",
       "network": {
-        "public-ips":"PUBLICIPS",
+        "publicips":"PUBLICIPS",
         "bridged-nic": "eth0",
         "public-interface": "br0",
         "private-interface": "br0"
