@@ -29,7 +29,8 @@ fi
 echo "Using Role: $role"
 
 curl http://euca-chef.s3.amazonaws.com/cookbooks.tgz > cookbooks.tgz
-curl http://euca-chef.s3.amazonaws.com/ciab.json > $role.json
+curl https://raw.githubusercontent.com/gregdek/fasterstart/master/ciab.json > $role.json
+# curl http://euca-chef.s3.amazonaws.com/ciab.json > $role.json
 sed -i "s/PUBLICIPS/$publicips/g" $role.json
 if [ ! -z "$bridge" ];then
     sed -i "s/eth0/$bridge/g" $role.json
