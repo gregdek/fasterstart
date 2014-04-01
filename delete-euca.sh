@@ -1,6 +1,7 @@
 virsh list | grep 'running$' | sed -re 's/^\\s*[0-9-]+\\s+(.*?[^ ])\\s+running$/\"\\1\"/' | xargs -r -n 1 -P 1 virsh destroy
 yum -y remove euca2ools python-eucadmin
 yum -y remove eucayptus*
+yum -y remove epel-release-6-8.noarch
 rm -rf ~eucalyptus
 rm /etc/yum.repos.d/euca2ools-release.repo
 rm /etc/yum.repos.d/eucalyptus-release.repo
